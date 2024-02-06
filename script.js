@@ -52,3 +52,24 @@ function initScrollSuave() {
   linksInternos.forEach(link => link.addEventListener('click', scrollToSection));
 }
 initScrollSuave();
+
+function initAnimacaoScroll() {
+  const sections = document.querySelectorAll('.js-scroll');
+
+  if(sections.length) {
+    function animaScroll() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = (sectionTop - (window.innerHeight * 0.6)) < 0;
+        if(isSectionVisible) 
+          section.classList.add('ativo');
+        else 
+          section.classList.remove('ativo');
+        
+      })
+    }
+    animaScroll()
+    window.addEventListener('scroll', animaScroll);
+  }
+}
+initAnimacaoScroll();
