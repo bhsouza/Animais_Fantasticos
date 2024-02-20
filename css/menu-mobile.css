@@ -16,7 +16,7 @@
     margin: 1rem;
     align-items: center;
     position: relative;
-    z-index: 101;
+    z-index: 300;
   }
 
   .js [data-menu="button"]::before {
@@ -39,7 +39,7 @@
     position: absolute;
     background: #fb5;
     width: 16rem;
-    z-index: 100;
+    z-index: 200;
     padding: 6rem 0 2rem 0;
     top: 0;
     box-shadow: .2rem .2rem .2rem 0 rgba(0, 0, 0, .2);
